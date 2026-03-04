@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Lag din egen CV</h1>
+
+    <div class="form-box">
+        <form method="POST">
+            <label>Navn:</label>
+            <input type="text" name="navn">
+
+            <label>E-post:</label>
+            <input type="text" name="epost">
+
+            <label>Telefon:</label>
+            <input type="text" name="telefon">
+
+            <label>Utdanning:</label>
+            <textarea name="utdanning"></textarea>
+
+            <label>Arbeidserfaring:</label>
+            <textarea name="erfaring"></textarea>
+
+            <label>Ferdigheter:</label>
+            <textarea name="ferdigheter"></textarea>
+
+            <button type="submit">Lag CV</button>
+        </form>
+    </div>
+
+   
+
