@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
+from db import init_db, save_cv
 
 app = Flask(__name__)
+init_db()
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -11,6 +13,9 @@ def home():
         utdanning = request.form["utdanning"]
         erfaring = request.form["erfaring"]
         ferdigheter = request.form["ferdigheter"]
+
+    
+        save_cv(navn, epost, telefon, utdanning, erfaring, ferdigheter)
 
         return render_template(
             "index.html",
