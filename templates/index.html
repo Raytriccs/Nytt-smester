@@ -32,6 +32,25 @@
             <button type="submit">Lag CV</button>
         </form>
     </div>
+    
+   {% if navn %}
+    <div class="cv-box">
+        <h2>{{ navn }}</h2>
+        <p><strong>E-post:</strong> {{ epost }}</p>
+        <p><strong>Telefon:</strong> {{ telefon }}</p>
 
+        <h3>Utdanning</h3>
+        <p>{{ utdanning }}</p>
+
+        <h3>Arbeidserfaring</h3>
+        <p>{{ erfaring }}</p>
+
+        <h3>Ferdigheter</h3>
+        <p>{{ ferdigheter }}</p>
+    </div>
+    {% endif %}
+
+</body>
+</html>
    
 
