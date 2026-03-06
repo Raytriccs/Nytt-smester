@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>CV Generator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+<link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
     <h1>Lag din egen CV</h1>
-
+    {% if error %}
+    <p style="color:red">{{ error }}</p>
+{% endif %}
+ <!-- div er container/boks, class form box for at css kan style den-->
     <div class="form-box">
+        <!-- lager skjemaet,POST sendes til serveren-->
         <form method="POST">
             <label>Navn:</label>
             <input type="text" name="navn">
