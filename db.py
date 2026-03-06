@@ -1,15 +1,20 @@
-import sqlite3
+import mysql.connector
 
 def init_db():
-    conn = sqlite3.connect("cv_database.db")
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="rayaanyasar",
+        password="Rayaan2007!",  # passordet du satte
+        database="cvdb"
+    )
     cursor = conn.cursor()
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS cv (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            navn TEXT,
-            epost TEXT,
-            telefon TEXT,
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            navn VARCHAR(100),
+            epost VARCHAR(100),
+            telefon VARCHAR(20),
             utdanning TEXT,
             erfaring TEXT,
             ferdigheter TEXT
@@ -19,14 +24,18 @@ def init_db():
     conn.commit()
     conn.close()
 
-
 def save_cv(navn, epost, telefon, utdanning, erfaring, ferdigheter):
-    conn = sqlite3.connect("cv_database.db")
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="rayaanyasar",
+        password="Rayaan2007!",
+        database="cvdb"
+    )
     cursor = conn.cursor()
 
     cursor.execute("""
         INSERT INTO cv (navn, epost, telefon, utdanning, erfaring, ferdigheter)
-        VALUES (?, ?, ?, ?, ?, ?)
+        VALUES (%s, %s, %s, %s, %s, %s)
     """, (navn, epost, telefon, utdanning, erfaring, ferdigheter))
 
     conn.commit()
