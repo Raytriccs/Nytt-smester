@@ -51,8 +51,22 @@ KI (ChatGPT) har blitt brukt som hjelp til:
 - dokumentasjon
 
 PLAN FOR IDAG
-Lage brukerveiledning for CV: 
+brukerveiledning
+- Lage brukerveiledning for CV: 
 
+- KM kartlegge behovet for og utvikle veiledninger for brukere og kunder
+
+
+UTVIKLING
 Input validering: 
-når man skriver noe feil eller ikke skriver noe så skal det komme opp «navn og epost må fylles ut» eller «telefon nummer må være minst 8 tall»
+- når man skriver noe feil eller ikke skriver noe så skal det komme opp «navn og epost må fylles ut» eller «telefon nummer må være minst 8 tall»
+
+- KM designe og implementere IT-tjenester tilpasset brukernes behov
+utøve brukerstøtte og veilede i relevant programvare
+
+DRIFT
+Enkel feilhåndtering ved lagring
+- Hvis noe går galt når du prøver å lagre en CV i databasen, skal brukeren få en vennlig feilmelding, og programmet krasjer ikke.
+
+- KM planlegge og drifte IT-løsninger som ivaretar informasjonssikkerhet og stabilitet
 
